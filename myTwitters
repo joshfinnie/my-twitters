@@ -1,0 +1,14 @@
+#!/bin/bash
+
+echo "###########################################################"
+echo "# Collecting Twitter Followers"
+t followers --sort=since > followers.log
+echo "###########################################################"
+echo "# Collecting Twitter Followings"
+t followings --sort=since > followings.log
+echo "###########################################################"
+echo "# Committing to Git"
+git add followers.log followings.log
+commit_message=$(date +%m/%d/%Y)
+git commit -m "$commit_message"
+git push origin master

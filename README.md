@@ -13,6 +13,10 @@ To create the `followings.log` run:
 
     $ t followings --sort=since > followings.log
 
+Or to automatically push it to twitter run `myTwitter`:
+
+    $ sh myTwitter
+
 ### Why
 
 First, why not? Second, this is an easy way to keep track of the changes in your
